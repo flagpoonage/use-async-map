@@ -1,6 +1,7 @@
 {
   "name": "use-async-map",
   "description": "A hook for interleaving a long running array map function into a component",
+  "repository": "https://github.com/flagpoonage/use-async-map",
   "version": "1.0.1",
   "author": {
     "name": "James Hay",
