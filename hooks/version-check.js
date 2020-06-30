@@ -3,14 +3,14 @@ const { toSemver } = require('./utils/simple-semver');
 const { runCommand, exitOnError } = require('./utils/utils');
 
 (async function () {
-  const protected_branches = (process.argv[3] || 'master').split(','); 
+  const protected_branches = (process.argv[2] || 'master').split(','); 
   
   const remote = await runCommand(
     "git remote | head -1 | tr -d '\\n'",
     'Unable to retrieve git remote name'
   );
   const branch = await runCommand(
-    "git branch | sed 's/\\*\\s//' | tr -d '\\n'",
+    "git branch | grep '*\\s.' | sed 's/\\*\\s//' | tr -d '\\n'",
     'Unable to retrieve git branch name'
   );
 
