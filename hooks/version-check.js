@@ -43,6 +43,8 @@ const { runCommand, exitOnError } = require('./utils/utils');
     console.error(
       `Working version [${current_package.version}] is not higher than the remote version [${result_package.version}]`
     );
+
+    process.exit(1);
   }
   else {
     console.log(`Working version [${current_package.version}] is higher than remote version [${result_package.version}] and can be pushed.`);
