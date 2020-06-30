@@ -1,13 +1,13 @@
 {
   "name": "use-async-map",
   "description": "A hook for interleaving a long running array map function into a component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "James Hay",
     "url": "https://github.com/flagpoonage"
   },
   "files": [
-    "./dist"
+    "dist"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
