@@ -1,0 +1,32 @@
+{
+  "name": "use-async-map",
+  "description": "A hook for interleaving a long running array map function into a component",
+  "version": "1.0.0",
+  "author": {
+    "name": "James Hay",
+    "url": "https://github.com/flagpoonage"
+  },
+  "files": [
+    "./dist"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:esm": "tsc --module es2015 --outDir ./dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir ./dist/cjs",
+    "build": "yarn build:esm && yarn build:cjs",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "@types/react": "^16.9.41",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  }
+}
